@@ -65,6 +65,27 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionAgenda on LandingPage {
+    sectionAgenda {
+      title
+      description
+    }
+  }
+
+  fragment pricingBox on LandingPage {
+    pricingBox {
+      totalPrice
+      discountPrice
+      numberInstallments
+      priceInstallment
+      benefits
+      button {
+        label
+        url
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -73,6 +94,8 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...techIcons
       ...sectionConcepts
       ...sectionModules
+      ...sectionAgenda
+      ...pricingBox
     }
   }
 `

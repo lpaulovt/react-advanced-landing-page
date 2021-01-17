@@ -52,6 +52,23 @@ export type SectionModulesProps = {
   }>
 }
 
+export type SectionAgendaProps = {
+  title: string
+  description: string
+}
+
+export type PricingBoxProps = {
+  totalPrice: number
+  discountPrice: number
+  numberInstallments: number
+  priceInstallment: number
+  benefits: string
+  button: {
+    label: string
+    url: string
+  }
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
@@ -59,4 +76,6 @@ export type LandingPageProps = {
   sectionTech: SectionTechProps
   sectionConcepts: SectionConceptsProps
   sectionModules: SectionModulesProps
+  sectionAgenda: SectionAgendaProps
+  pricingBox: PricingBoxProps
 }
